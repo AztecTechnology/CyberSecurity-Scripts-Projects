@@ -188,7 +188,7 @@ SSH into the control node and follow the steps below:
 
 - _Which file is the playbook ?(that would be the file coded with YAML language) Where do you copy it?_(best practices is to place within etc/ansible but will run on ~ )
 - **To verify your instance of ELK is functioning properly, go to** **http://[ELK-PUBLIC-IP]:5601/app/kibana** **and replace [ELK-PUBLIC-IP] with the IP address of the ELK VM.**
-- http://40.121.110.118:5601/app/kibana#/discover?_g=(refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(columns:!(_source),index:'metricbeat-*',interval:h,query:(language:kuery,query:''),sort:!(!('@timestamp',desc)))
+- http:/(publicip_of_elkcontainer):5601/app/kibana#/discover?_g=(refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(columns:!(_source),index:'metricbeat-*',interval:h,query:(language:kuery,query:''),sort:!(!('@timestamp',desc)))
 
 _Command to run play book:
 
